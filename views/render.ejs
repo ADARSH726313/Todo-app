@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #3498db; /* Background color */
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3498db; /* Header background color */
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #ecf0f1; /* Even row background color */
+        }
+
+        tr:nth-child(odd) {
+            background-color: #ffffff; /* Odd row background color */
+        }
+        .button-style {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        /* Change styles on hover */
+        .button-style:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <body>
+       
+            <div class="container">
+                <h1>Todo List</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(let i = 0; i < val.length; i++) { %>
+                        <tr>
+                            <td><%= val[i].task %></td>
+                            <td><%= val[i].status %></td>
+                        </tr>
+                        <!-- Add more rows with task data as needed -->
+                        <% } %>
+
+                        
+                    </tbody>
+                </table>
+
+                <div style="margin-top: 40px;" class="button-container">
+                    <!-- Anchor element inside a button-style div -->
+                    <div style="text-decoration: none !important;" class="button-style">
+                        <a href="/">Home</a>
+                    </div>
+                </div>
+
+                
+            </div>
+
+          
+       
+    </body>
+    
+</body>
+
+</html>

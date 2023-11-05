@@ -1,0 +1,49 @@
+
+<% for(let i=0;i<val.length;i++){%>
+    <div class="container">
+        <h1>Todo List</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> <% =val[i].task %></td>
+                    <td><% =val[i].Status %></td>
+                </tr>
+                <tr>
+                    <td>Write report</td>
+                    <td>Pending</td>
+                </tr>
+                <!-- Add more rows with task data as needed -->
+            </tbody>
+        </table>
+    </div>
+    <% }%>
+
+    <body>
+        <% for(let i = 0; i < val.length; i++) { %>
+            <div class="container">
+                <h1>Todo List</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><%= val[i].task %></td>
+                            <td><%= val[i].status %></td>
+                        </tr>
+                        <!-- Add more rows with task data as needed -->
+                    </tbody>
+                </table>
+            </div>
+        <% } %>
+    </body>
+    

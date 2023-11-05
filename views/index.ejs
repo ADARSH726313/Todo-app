@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #3498db; /* Background color */
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        .todo-form {
+            margin-bottom: 20px;
+        }
+
+        .task-input,
+        #status {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 70%;
+            margin-bottom: 10px;
+        }
+
+        .add-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #2ecc71; /* Green color for the button */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-button:hover {
+            background-color: #27ae60; /* Darker green color on hover */
+        }
+
+        .todo-list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .todo-item {
+            background-color: #ecf0f1;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .delete-button {
+            background-color: #e74c3c; /* Red color for delete button */
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .delete-button:hover {
+            background-color: #c0392b; /* Darker red color on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div  class="container" >
+        <h1>Todo App</h1>
+        <form action="/api/users" method="POST" class="container" id="todo-form">
+            <!-- ... other form fields ... -->
+            <input type="text" id="task" class="task-input" placeholder="Enter your task..." name="task">
+            <select id="status" class="task-input" name="status">
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <button id="add-task" class="add-button">Add Task</button>
+            <!-- ... other form fields ... -->
+        </form>
+        <ul id="todo-list" class="todo-list"></ul>
+    </div>
+
+  
+</body>
+
+</html>
